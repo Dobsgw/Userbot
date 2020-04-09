@@ -17,7 +17,7 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = ("`This message is automated.`\n\n"
-                  "Anything related to Evolution-X Twolip goes here:"
+                  "Anything related to Evolution-X Twolip goes here:\n"
                   "@EvolutionXTwolip\n\n"
                   "^Tag me there. Anything else just wait 'till I reply!\n"
                   "Unnecessary PMs = block + report spam.")
@@ -27,7 +27,7 @@ UNAPPROVED_MSG = ("`This message is automated.`\n\n"
 @register(incoming=True, disable_edited=True, disable_errors=True)
 async def permitpm(event):
     """ Prohibits people from PMing you without approval. \
-        Will block retarded nibbas automatically. """
+        Will block retards automatically. """
     if PM_AUTO_BAN:
         self_user = await event.client.get_me()
         if event.is_private and event.chat_id != 777000 and event.chat_id != self_user.id and not (
@@ -69,8 +69,8 @@ async def permitpm(event):
 
                 if COUNT_PM[event.chat_id] > 4:
                     await event.respond(
-                        "`You were spamming my master's PM, which I didn't like.`\n"
-                        "`You have been BLOCKED and reported as SPAM, until further notice.`"
+                        "`You were spamming.`\n"
+                        "`You've been BLOCKED and reported as SPAM.`"
                     )
 
                     try:
@@ -95,7 +95,7 @@ async def permitpm(event):
                             BOTLOG_CHATID,
                             "[" + name0 + "](tg://user?id=" +
                             str(event.chat_id) + ")" +
-                            " was just another retarded nibba",
+                            " was just another retard",
                         )
 
 
@@ -182,7 +182,7 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        await apprvpm.edit("`This nibba may already be approved.`")
+        await apprvpm.edit("`This user may already be approved.`")
         return
 
     await apprvpm.edit(f"[{name0}](tg://user?id={uid}) `approved to PM!`")
@@ -225,7 +225,7 @@ async def disapprovepm(disapprvpm):
         await disapprvpm.client.send_message(
             BOTLOG_CHATID,
             f"[{name0}](tg://user?id={disapprvpm.chat_id})"
-            " was disapproved to PM you master.",
+            " was disapproved to PM you.",
         )
 
 
@@ -268,7 +268,7 @@ async def unblockpm(unblock):
         replied_user = await unblock.client.get_entity(reply.from_id)
         name0 = str(replied_user.first_name)
         await unblock.client(UnblockRequest(replied_user.id))
-        await unblock.edit("`You have been unblocked.\nThank my master's forgiveness`")
+        await unblock.edit("`You have been unblocked.\n`")
 
     if BOTLOG:
         await unblock.client.send_message(
