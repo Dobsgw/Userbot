@@ -19,6 +19,8 @@ from userbot.events import register
 UNAPPROVED_MSG = ("`This message is automated.`\n\n"
                   "Anything related to Evolution-X Twolip goes here:\n"
                   "@EvolutionXTwolip\n\n"
+                  "Anything related to Evolution-X Sagit goes here:\n"
+                  "@EvolutionXSagit\n\n"
                   "^Tag me there. Anything else just wait 'till I reply!\n"
                   "Unnecessary PMs = block + report spam.")
 # =================================================================
