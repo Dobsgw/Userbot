@@ -17,12 +17,10 @@ from userbot.events import register
 
 # ========================= CONSTANTS ============================
 UNAPPROVED_MSG = ("`This message is automated.`\n\n"
-                  "Anything related to Evolution-X Sagit goes here:\n"
-                  "@EvolutionXSagit\n\n"
-                  "^Tag me there.\n\n"
-                  "I dropped Evo Twolip but group is still here:\n"
-                  "@EvolutionXTwolip\n\n"
-                  "Unnecessary PMs = block + report spam.")
+                  "If you don't know me you probably\n"
+                  "don't need to be messaging me here\n\n"
+                  "If you do - hang tight! I'll get to you\n\n"
+                  "Unnecessary additional PMs = block + report spam.")
 # =================================================================
 
 
