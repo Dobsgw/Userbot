@@ -21,7 +21,7 @@ UNAPPROVED_MSG = ("`This message is automated.`\n\n"
                   "don't need to be messaging me here\n\n"
                   "If you do - hang tight! I'll get to you\n\n"
                   "Watch a video while you wait:\n"
-                  "https://www.youtube.com/watch?v=JMG1Nl7uWko\n\n"
+                  "https://www.youtube.com/watch?v=5sNuDu4dE8Y\n\n"
                   "Unnecessary additional PMs = block + report spam.")
 # =================================================================
 
